@@ -13,8 +13,8 @@
 ### Resource Description
 
 #### Item:
-The core resource of the system. All items will have unique identifiers and foreign keys referencing location instances. Locations will have a composite relationship with items, if a location is removed from the database all items associated with the location will also be removed. An item instance will contain the cost of the item, as well as its markup (e.g. a drink costs 2 currency to buy and is sold at a markup of 1.5 = [2 x 1.5] making its total price 3 currency) for operational use.
-<br>
+The core resource of the system. All items will have unique identifiers and foreign keys referencing location instances. Locations will have a composite relationship with items, if a location is removed from the database all items associated with the location will also be removed. An item instance will contain the cost of the item, as well as its markup (e.g. a drink costs 2 currency to buy and is sold at a markup of 1.5 = [2 x 1.5] making its total price 3 currency) for operational use.<br>
+
 `id`: unique primary key as an integer<br>
 `location_id`: foreign key to location instance as an integer (many-to-many)<br>
 `name`: the name of the item as a string<br>
