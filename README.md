@@ -24,7 +24,7 @@ The core resource of the system. All items will have unique identifiers and fore
 `expiration`: the date at which the item expires (YYYY-MM-DD)<br>
 
 #### Location:
-The location resource will provide information on where the items will be physically stored as well as contact information.
+The location resource will provide information on where the items will be physically stored as well as contact information.<br>
 
 `id`: primary key as an integer<br>
 `address`: physical location of the location instance as a string<br>
