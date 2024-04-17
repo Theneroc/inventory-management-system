@@ -14,46 +14,46 @@
 
 #### Item:
 The core resource of the system. All items will have unique identifiers and foreign keys referencing location instances. Locations will have a composite relationship with items, if a location is removed from the database all items associated with the location will also be removed. An item instance will contain the cost of the item, as well as its markup (e.g. a drink costs 2 currency to buy and is sold at a markup of 1.5 = [2 x 1.5] making its total price 3 currency) for operational use.
-
-`id`: unique primary key as an integer
-`location_id`: foreign key to location instance as an integer (many-to-many)
-`name`: the name of the item as a string
-`cost`: the cost of an item before adding the profit margin as a double
-`markup`: the profit margin percentage of an item as a float
-`qty`: the number of items existing (e.g. 100 bottles of 2L water or could be 1 case of water containing 8 bottles --> 8 being the qty) as an integer
-`expiration`: the date at which the item expires (YYYY-MM-DD)
+<br>
+`id`: unique primary key as an integer<br>
+`location_id`: foreign key to location instance as an integer (many-to-many)<br>
+`name`: the name of the item as a string<br>
+`cost`: the cost of an item before adding the profit margin as a double<br>
+`markup`: the profit margin percentage of an item as a float<br>
+`qty`: the number of items existing (e.g. 100 bottles of 2L water or could be 1 case of water containing 8 bottles --> 8 being the qty) as an integer<br>
+`expiration`: the date at which the item expires (YYYY-MM-DD)<br>
 
 #### Location:
 The location resource will provide information on where the items will be physically stored as well as contact information.
 
-`id`: primary key as an integer
-`address`: physical location of the location instance as a string
-`email_address`: email address of the location (if it is an external location from the inventory itself) as a string
-`phone_num`: phone number of the location (if it is an external location from the inventory itself) as a string
+`id`: primary key as an integer<br>
+`address`: physical location of the location instance as a string<br>
+`email_address`: email address of the location (if it is an external location from the inventory itself) as a string<br>
+`phone_num`: phone number of the location (if it is an external location from the inventory itself) as a string<br>
 
 
 #### Import:
 The imports are representations of transactions being imported into the inventory. Each import instance will have a foreign key of the item they will physically contain. An import will have an aggregate relationship with an item imported into the inventory as well as the location id of where the item was imported to. They will also contain further specifications as to the cost of the import.
 
-`id`: primary key as an integer
-`item_id`: foreign key to a specific item (one-to-one) as an integer
-`location_id`: foreign key to a specific location (one-to-one) as an integer
-`cost`: the cost of importing to the inventory (like a purchase) as a double
-`qty`: the amount of the specific item within the transaction (e.g. 5 cases of water)
-`transaction_date`: the date the import took place (YYYY-MM-DD)
+`id`: primary key as an integer<br>
+`item_id`: foreign key to a specific item (one-to-one) as an integer<br>
+`location_id`: foreign key to a specific location (one-to-one) as an integer<br>
+`cost`: the cost of importing to the inventory (like a purchase) as a double<br>
+`qty`: the amount of the specific item within the transaction (e.g. 5 cases of water)<br>
+`transaction_date`: the date the import took place (YYYY-MM-DD)<br>
 
 
 #### Export:
 The exports are representations of transactions being imported into the inventory. Each export instance will have a foreign key of the item they will physically contain. An export will have an aggregate relationship with an item exported from the inventory as well as the location id of where the item was exported from. They will also contain further specifications as to the income received from the export.
 
-`id`: primary key as an integer
-`item_id`: foreign key to a specific item (one-to-one) as an integer
-`location_id`: foreign key to a specific location (one-to-one) as an integer
-`income`: the income of exporting from the inventory (like a sale) as a double
-`qty`: the amount of the specific item within the transaction (e.g. 5 cases of water)
-`transaction_date`: the date the import took place (YYYY-MM-DD)
-
-#### Further documentation on the implementation is expressed within the code itself  - Goto: (`InventoryManagementSystemApplication.class`)
+`id`: primary key as an integer<br>
+`item_id`: foreign key to a specific item (one-to-one) as an integer<br>
+`location_id`: foreign key to a specific location (one-to-one) as an integer<br>
+`income`: the income of exporting from the inventory (like a sale) as a double<br>
+`qty`: the amount of the specific item within the transaction (e.g. 5 cases of water)<br>
+`transaction_date`: the date the import took place (YYYY-MM-DD)<br>
+<br>
+#### Further documentation on the implementation is expressed within the code itself  - Goto: (`InventoryManagementSystemApplication.class`)<br>
 ### Tables
 
 <span class="c0"></span>
