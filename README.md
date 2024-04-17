@@ -55,7 +55,7 @@ The exports are representations of transactions being imported into the inventor
 <br>
 #### Further documentation on the implementation is expressed within the code itself  - Goto: (`InventoryManagementSystemApplication.class`)<br>
 
-####Testing of the API is accessible via the Postman file within the repo ![Postman Tests](IMS REST CRUD API.postman_collection.json)
+####Testing of the API is accessible via the Postman file within the repo `IMS REST CRUD API.postman_collection.json`
 ### Tables
 
 <span class="c0"></span>
