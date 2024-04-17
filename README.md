@@ -14,6 +14,7 @@
 
 #### Item:
 The core resource of the system. All items will have unique identifiers and foreign keys referencing location instances. Locations will have a composite relationship with items, if a location is removed from the database all items associated with the location will also be removed. An item instance will contain the cost of the item, as well as its markup (e.g. a drink costs 2 currency to buy and is sold at a markup of 1.5 = [2 x 1.5] making its total price 3 currency) for operational use.
+`hello`
 
 #### Location:
 The location resource will provide information on where the items will be physically stored as well as contact information.
